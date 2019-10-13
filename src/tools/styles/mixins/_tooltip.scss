@@ -1,0 +1,13 @@
+@mixin tooltip-after {
+  border-style: solid;
+  border-width: 10px;
+  content: '';
+  position: absolute;
+}
+
+@mixin tooltip-size($dimension: 10rem) {
+  min-height: $dimension;
+  max-height: $dimension;
+  min-width : $dimension;
+  max-width : $dimension;
+}

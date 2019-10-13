@@ -1,0 +1,27 @@
+@mixin box-shadow($background-color: transparent) {
+  box-shadow: $box-shadow-direction transparentize($background-color, $transparent-ratio);
+}
+
+@mixin box-shadow-double($background-color: transparent) {
+  box-shadow:
+    $box-shadow-direction transparentize($background-color, $transparent-ratio),
+    $box-shadow-direction transparentize($box-shadow-tint, $transparent-ratio/4);
+}
+
+@mixin dropdown-box-shadow($background-color: transparent) {
+  box-shadow: $dropdown-shadow-direction transparentize($background-color, $transparent-ratio);
+}
+
+@mixin cards-box-shadow() {
+  box-shadow: $box-inset-direction rgba(133, 141, 153, 0.4);
+}
+
+@mixin base-transition($attribute: all, $delay: 1) {
+  transition: $attribute $default-transition-time * $delay ease;
+}
+
+@mixin relative-vertical-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

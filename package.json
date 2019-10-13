@@ -1,0 +1,48 @@
+{
+  "name": "DOCZ",
+  "main": "src/babel-components/",
+  "scripts": {
+    "prestart": "yarn || npm i",
+    "start:docs": "docz dev",
+    "start": "yarn start:docs",
+    "prebuild": "npm run prestart",
+    "build:docs": "docz build"
+  },
+  "dependencies": {
+    "@types/react": "^16.8.23",
+    "gatsby-plugin-sass": "^2.1.18",
+    "node-sass": "^4.12.0"
+  },
+  "standard": {
+    "ignore": [
+      "src/babel-components/"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/core": "^10.0.16",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^4.1.1",
+    "css-loader": "^3.1.0",
+    "docz": "^2.0.0-rc.1",
+    "gatsby-theme-docz": "^1.2.0",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "sass-loader": "^7.1.0",
+    "scheduler": "0.15.0",
+    "standard": "^13.1.0",
+    "styles-loader": "^1.0.2",
+    "to-style": "^1.3.3",
+    "uniqid": "^5.0.3",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

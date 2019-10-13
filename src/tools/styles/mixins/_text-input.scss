@@ -1,0 +1,61 @@
+@mixin input-label() {
+  font-size   : .9rem;
+  margin-right: 1rem;
+  color       : $dark-grey;
+  font-weight : 600;
+  line-height : 1.1;
+  opacity     : .8;
+}
+
+@mixin text-input-background-color($background-color: $ice-blue) {
+  background-color: $background-color;
+}
+
+@mixin text-input-border-color($border-color: $border-grey) {
+  border: solid $border-thickness $border-color;
+}
+
+@mixin text-input-color($color: $body-paragraph-text) {
+  color: $color;
+}
+
+@mixin input-base {
+  @include border-box-sizing;
+  font-size : 14px;
+  height    : 2.25rem;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  width     : 100%;
+  padding   : 0.5rem 0.75rem;
+  transition: all $default-transition-time ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    @include text-input-color($lighter-grey);
+  }
+
+  &:disabled {
+    @include text-input-color($text-input-disabled);
+    cursor: not-allowed;
+  }
+}
+
+
+@mixin text-input() {
+  @include input-base();
+  border-radius: $border-radius;
+  box-shadow   : inset $text-input-inset-direction $light-grey;
+
+  &:hover {
+    @include text-input-border-color($text-input-hover-border);
+  }
+
+  &:focus,
+  &:active {
+    @include text-input-border-color($text-input-active);
+    @include text-input-color($black);
+  }
+}

@@ -1,0 +1,125 @@
+$root-font-size          : 14px;
+$root-font-size-tablet-up: 16px;
+$transparent-ratio       : 0.8;
+$default-transition-time : 0.25s;
+$darken-percentage       : 7.5%;
+$lighten-percentage      : 7.5%;
+$base-unit               : 1rem;
+$border-radius           : 3px;
+
+$z-index-notification: 900;
+$z-index-modal       : 90;
+$z-index-dropdown    : 9;
+$z-index-base        : 1;
+
+$mobile-only: '(max-width: 722px)';
+$tablet     : '(min-width: 723px)';
+$tablet-only: '(min-width: 723px) and (max-width: 1024px)';
+$desktop    : '(min-width: 1024px)';
+$retina: 'screen and (-webkit-min-device-pixel-ratio: 2)';
+
+$white                : #ffffff;
+$ice-blue             : #fcfdff;
+$white-soft-blue      : #ecf9ff;
+$soft-grey            : #f8fafc;
+$azureish-gray        : #9aabbd;
+$phantom-grey         : #bcc8d6;
+$lighter-grey         : #cfd9e1;
+$light-grey           : #d0d9e4;
+$light-cornflower-grey: #b3c5d2;
+$blue-grey            : #8c9eb8;
+$cool-grey            : #a9b2bd;
+$steel                : #838991;
+$metallic-dull        : #5f718e;
+$pigeon               : #aebed6;
+$metallic-blue        : #566986;
+$steel-blue           : #58799f;
+$dark-grey            : #424a54;
+$dark-grey-blue       : #355164;
+$navy                 : #0b3770;
+$lochmara             : #0a84d1;
+$cerulean             : #0b91e5;
+$brilliant-cornflower : #40B5FF;
+$sky-blue-2           : #159ef4;
+$azure                : #18a4fc;
+$azure-radiance       : #0c98f1;
+$azure-tooltip        : #00a2ff;
+$java                 : #1fd1b9;
+$black                : #000000;
+$bright-green         : #08b604;
+$red                  : #ec4d3c;
+$cherry-red           : #d0021b;
+$tomato               : #f4584c;
+$squash               : #f5a623;
+$yellow               : #ffd55e;
+$ale-grey             : #f1f6fb;
+$light-blue           : #eef2f7;
+$pale-grey-two        : #f9fafb;
+$pale-grey-three      : #f7fafc;
+$cloudy-blue-3        : #abbed6;
+$true-green           : #08b604;
+
+// Layout
+$background-grey: $soft-grey;
+$border-grey      : hsl(211, 30%, 79%);
+$border-grey-light: #dce0e6;
+
+$page-header-color         : $navy;
+$page-caption-color        : $steel-blue;
+$page-anchor-color         : $dark-grey-blue;
+$page-anchor-active-color  : $azure;
+$panel-section-header-color: $metallic-dull;
+
+$body-paragraph-text: $metallic-blue;
+$body-caption-text  : $blue-grey;
+$hint-text          : $lighter-grey;
+$disabled-text      : $blue-grey;
+
+$table-column: $blue-grey;
+
+
+$font-weight-thin    : 100;
+$font-weight-light   : lighter;
+$font-weight-normal  : normal;
+$font-weight-semibold: 600;
+$font-weight-bold    : 700;
+$font-weight-bolder  : 800;
+
+// Font Families
+$proxima-nova: 'Proxima Nova',
+Arial,
+sans-serif;
+$open-sans: 'Open Sans',
+sans-serif;
+
+// Typography sizes
+$h1-header-font-size: 38px;
+$h2-header-font-size: 22px;
+$h3-header-font-size: 18px;
+$h4-header-font-size: 14px;
+$h5-header-font-size: 13px;
+$h6-header-font-size: 12px;
+
+// Button Colors
+$button-text                  : $steel-blue;
+$default-button-color         : $azure;
+$default-hover-button-color   : $azure-radiance;
+$default-button-border-color  : $sky-blue-2;
+$secondary-button-border-color: $light-grey;
+$danger-button-color          : $red;
+$cta-blue                     : #2e34e4;
+$cta-light-blue               : #0089ff;
+$box-shadow-direction         : 0 2px 2px 0;
+$box-shadow-tint              : rgb(179, 190, 206);
+$box-shadow-button            : rgba(71, 82, 102, 0.16);
+$box-shadow-tint-cta          : rgb(58, 83, 119);
+$box-inset-direction          : 0 1px 4px 0;
+$border-thickness             : 2px;
+$button-disabled-text-color   : #446884;
+$button-disabled-border-color : #e5ebf2;
+
+$cta-gradient-degree        : 159deg;
+$cta-gradient-left-strength : 0%;
+$cta-gradient-right-strength: 100%;
+$cta-gradient-left          : $cta-light-blue $cta-gradient-left-strength;
+$cta-gradient-right         : $cta-blue $cta-gradient-right-strength;

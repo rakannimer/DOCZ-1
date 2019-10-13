@@ -1,0 +1,85 @@
+@mixin read-only-input {
+  border        : 0;
+  cursor        : pointer;
+  display       : flex;
+  flex-direction: row;
+  font-size     : calculate-rem(14px);
+  height        : 2.25rem;
+  letter-spacing: 0.025rem;
+  max-width     : 100%;
+  min-height    : 2.25rem;
+  padding       : 0.5rem 0.75rem;
+  transition    : all $default-transition-time ease;
+  box-sizing    : border-box;
+  color         : $dark-grey-blue;
+
+  &:hover {
+    background-color: $dropdown-option-hover;
+  }
+
+  &:focus {
+    outline-offset: 0;
+  }
+
+  &:disabled {
+    @include text-input-color($text-input-disabled);
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    @include text-input-color($hint-text);
+  }
+}
+
+@mixin dropdown-menu {
+  @include dropdown-box-shadow($box-shadow-tint-cta);
+  background-color: $white;
+  display         : flex;
+  flex-direction  : column;
+  margin          : 0;
+  max-width       : 100%;
+  min-width       : 100%;
+  padding         : 0.5rem 0;
+}
+
+@mixin dropdown-menu-item {
+  @include read-only-input();
+  padding: 0.5rem;
+}
+
+@mixin dropdown-menu-list-item {
+  @include border-box-sizing;
+  @include dropdown-menu-item;
+  align-items: center;
+  flex       : 1;
+  box-sizing : border-box;
+  max-height : 2.25rem;
+
+  input:read-only {
+    border    : 0;
+    background: transparent;
+    color     : inherit;
+    cursor    : pointer;
+    flex      : 1;
+    min-height: 100%;
+    padding   : 0;
+
+    &:disabled {
+      // TODO: aesthetics.. to be confirmed with product
+      color  : $text-input-disabled;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__checkmark {
+    color       : $java;
+    margin-right: 0.5rem;
+    width       : 0.75rem;
+    height      : 100%;
+    display     : flex;
+    align-items : center;
+  }
+}

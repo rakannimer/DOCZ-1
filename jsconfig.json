@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "jsx": "react",
+    "module": "commonjs",
+    "paths": {
+      "@src/utils/*": [
+        "./src/utils/*"
+      ],
+      "@src/components/*": [
+        "./src/components/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "src/babel-components",
+    ".dist"
+  ]
+}

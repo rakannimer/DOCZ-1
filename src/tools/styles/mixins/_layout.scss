@@ -1,0 +1,13 @@
+@mixin border-box-sizing {
+  box-sizing: border-box;
+
+  &>* {
+    box-sizing: border-box;
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  @media #{$breakpoint} {
+    @content;
+  }
+}

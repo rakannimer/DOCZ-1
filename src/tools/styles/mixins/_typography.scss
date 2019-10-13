@@ -1,0 +1,50 @@
+@function calculate-rem($px-size) {
+  $rem-size: $px-size/$root-font-size-tablet-up;
+  @return #{$rem-size}rem;
+}
+
+@mixin headings($start: 1, $end: 6) {
+  @for $i from $start through $end {
+    h#{$i},
+    .h#{$i} {
+      border: 0;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      @if $i == 1 {
+        @include font-size($h1-header-font-size);
+      } @else if $i == 2 {
+        @include font-size($h2-header-font-size);
+      } @else if $i == 3 {
+        @include font-size($h3-header-font-size);
+      } @else if $i == 4 {
+        @include font-size($h4-header-font-size);
+      } @else if $i == 5 {
+        @include font-size($h5-header-font-size);
+      } @else if $i == 6 {
+        @include font-size($h6-header-font-size);
+      }
+      @content;
+    }
+  }
+}
+
+@mixin font-size($pxSize) {
+  font-size: $pxSize;
+  font-size: calculate-rem($pxSize);
+}
+
+@mixin anchor() {
+  color: $page-anchor-color;
+  cursor: pointer;
+  transition: color $default-transition-time ease;
+
+  &:active {
+    color: $page-anchor-active-color;
+  }
+
+  &:visited {
+    color: $page-anchor-color;
+  }
+}
+
