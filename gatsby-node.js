@@ -2,7 +2,7 @@
 // The Docz compiler (Gatsby JS) does not use the same webpack used to compile the component library, it has its own.
 
 // This path is relative to .docs/gatsby-node.js file
-const { relativeToRoot } = require('../config/helpers')
+const { relativeToRoot } = require("../config/helpers");
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -10,18 +10,14 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       rules: [
         {
           test: /\.scss$/,
-          use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
-          ]
+          use: ["isomorphic-style-loader", "css-loader", "sass-loader"]
         }
       ]
     },
     resolve: {
       alias: {
-        '@src': relativeToRoot('./src')
+        "@src": relativeToRoot("./src")
       }
     }
-  })
-}
+  });
+};
